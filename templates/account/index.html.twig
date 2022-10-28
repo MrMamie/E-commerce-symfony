@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %} 
+{% block title %} Mon compte - Art2pix{% endblock %}
+{% block content %}
+    <h1>Mon compte</h1>
+    bienvenue {{ app.user.firstname }} dans votre compte. <br />
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="account-item text-center">
+                <img src="{{asset('assets/img/mot-de-passe.png')}}" alt="Modifier votre mot de passe" srcset=""><br>
+                <a href="{{ path('app_account_password') }}">Modifier votre mot de passe</a>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="account-item text-center">
+                <img src="{{asset('assets/img/adresse-du-domicile.png')}}" alt="Gérer mes adresses" srcset=""><br>
+                <a href="{{ path('app_account_address') }}">Gérer mes adresses</a>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="account-item text-center">
+                <img src="{{asset('assets/img/purchase.png')}}" alt="Mes commandes" srcset=""><br>
+                <a href="{{ path('account_order') }}">Mes commandes</a>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+{# {{ dump(app.user) }} dump(app.nomClass) permet de debug et voir se que l'on a
+sur notre page #}
+{% endblock %}

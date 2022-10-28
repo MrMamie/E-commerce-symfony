@@ -1,0 +1,7 @@
+pour personnaliser les pages d'erreur :
+
+installer  composer require symfony/twig-pack
+créer les dossiers bundles/twigBundle/Exception
+puis une page qui reccupère toutes les erreurs error.html.twig
+pour personnaliser les pages pour chaque erreur
+error404html.twig préfixer error{type_erreur}.html.twig
